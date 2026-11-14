@@ -1,20 +1,20 @@
-# ECE 366 - Project 2 - Progress Report 1
+# ECE 366 - Project 2 - Progress Report 2
 
 ## Student and group information
 
-- **Student name:** Tamilore A
+- **Student name:** TamiloreA
 - **NetID:** oades4
-- **Current group size:** 1 (working individually)
-
+- **Group size:** 1 
+- **Group status:** I am the only person in my group. The assignment originally requires groups of three; instructor approval for a solo submission has not been confirmed.
 
 ## Contribution
 
-I am responsible for all parts of Progress Report 1:
+I am responsible for all of Progress Report 2:
 
-- Writing the `Fibonacci.asm` MIPS assembly program.
-- Checking the Fibonacci algorithm and testing sample inputs in MARS.
-- Preparing and maintaining the GitHub repository.
-- Writing this README and preparing the submission archive.
+- Implementing the MIPS assembly `IsOdd(m)` function.
+- Implementing division by repeated subtraction without using the MIPS `DIV` instruction.
+- Testing the program with even, odd, and zero inputs in MARS.
+- Preparing the README, GitHub repository, and submission archive.
 
 
 ## GitHub repository
@@ -22,15 +22,19 @@ I am responsible for all parts of Progress Report 1:
 https://github.com/Tamilore77/ECE366-Project-2.git
 
 
-## How to run in the MIPS MARS simulator
+## How to run in MIPS MARS
+
+1. Open the MARS MIPS Simulator (
+2. Select **File > Open** and open `IsOdd.asm`.
+3. In the `.data` section, change `input_m: .word 7` to your desired nonnegative test input.
+4. Select **Run > Assemble**.
+5. Select **Run > Go**.
+6. Read the answer in the **Run I/O** panel. For the default input, the expected line is `IsOdd(7) = 1`.
+7. inspect the **Data Segment** to confirm the value in `odd_result` has changed to `1` or `0`.
+8. To test a different input, edit `input_m`, then assemble and run again.
 
 
-1. Edit `input_n: .word 10` in the `.data` section to select a nonnegative input. For example, use `input_n: .word 7`.
-2. Select **Run > Assemble**.
-3. Select **Run > Go**.
-4. Read the answer in the **Run I/O** panel. For `n = 7`, the expected line is `Fibonacci(7) = 13`.
-5. Inspect the **Data Segment** in the **Execute** tab to confirm the result was stored in `fib_result`.
-6. To try another number, change `input_n`, assemble again, and run the program.
+
 
 
 
